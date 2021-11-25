@@ -1,0 +1,38 @@
+{
+    "name": "@404coder/addtimestamp-webpack-plugin",
+    "version": "1.0.0",
+    "description": "404coder webpack plugin -- addTimestamp to js files",
+    "main": "./dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "tslint -p tsconfig.json",
+        "patch": "npm run build && npm version patch && npm --registry https://registry.npmjs.org/ publish",
+        "major-publish": "npm run build && npm version major && npm --registry https://registry.npmjs.org/ publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:A404coder/introducion.git"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "keywords": [
+        "404coder"
+    ],
+    "author": "404coder",
+    "license": "ISC",
+    "homepage": "https://github.com/A404coder/introducion/blob/master/README.md",
+    "devDependencies": {
+        "prettier": "^2.4.1",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.5.2"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "dependencies": {
+        "html-webpack-plugin": "^5.5.0"
+    }
+}
